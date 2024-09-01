@@ -1,9 +1,3 @@
-FROM python:3.8-slim-buster
-
-RUN apt update -y && apt install awscli -y
-WORKDIR /app
-
-COPY . /app
-RUN pip install -r requirements.txt
-
-CMD ["python3", "app.py"]
+version https://git-lfs.github.com/spec/v1
+oid sha256:c523460d95e9ae0725783b2512a8f011dc96ea89d9730b9a11e3cfa234578690
+size 160

@@ -1,22 +1,3 @@
-import os
-import sys
-import logging
-
-logging_str = "[%(asctime)s: %(levelname)s: %(module)s: %(message)s]"
-
-log_dir = "logs"
-log_filepath = os.path.join(log_dir,"running_logs.log")
-os.makedirs(log_dir, exist_ok=True)
-
-
-logging.basicConfig(
-    level= logging.INFO,
-    format= logging_str,
-
-    handlers=[
-        logging.FileHandler(log_filepath),
-        logging.StreamHandler(sys.stdout)
-    ]
-)
-
-logger = logging.getLogger("cnnClassifierLogger")
+version https://git-lfs.github.com/spec/v1
+oid sha256:c3d7dd9bc7ce4ea9e9799240218e9a04fa4b1fec0bef8a745f89d05a5bccd5e2
+size 449

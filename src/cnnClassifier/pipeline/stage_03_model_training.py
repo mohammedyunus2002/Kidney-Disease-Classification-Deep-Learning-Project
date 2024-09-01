@@ -1,35 +1,3 @@
-from cnnClassifier.config.configuration import ConfigurationManager
-from cnnClassifier.components.model_training import Training
-from cnnClassifier import logger
-
-
-
-STAGE_NAME = "Training"
-
-
-
-class ModelTrainingPipeline:
-    def __init__(self):
-        pass
-
-    def main(self):
-        config = ConfigurationManager()
-        training_config = config.get_training_config()
-        training = Training(config=training_config)
-        training.get_base_model()
-        training.train_valid_generator()
-        training.train()
-
-
-
-if __name__ == '__main__':
-    try:
-        logger.info(f"*******************")
-        logger.info(f">>>>>> stage {STAGE_NAME} started <<<<<<")
-        obj = ModelTrainingPipeline()
-        obj.main()
-        logger.info(f">>>>>> stage {STAGE_NAME} completed <<<<<<\n\nx==========x")
-    except Exception as e:
-        logger.exception(e)
-        raise e
-        
+version https://git-lfs.github.com/spec/v1
+oid sha256:493f8a11149a48e97a8cb6cce4547c39baecddf677a525cbc94168277c9c8fe0
+size 894
